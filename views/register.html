@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset = "UTF-8">
+       <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+       <title> Mercado Liebre</title>
+       <link href= 'https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap' rel = "stylesheet">
+       
+       <link rel="stylesheet" href="css/formularios.css">
+       <script src="https://kit.fontawesome.com/86d9955678.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+<form action = "/register" method = "POST">
+    <div class = "control-formulario">
+        <label for = "nombre"> Nombre: </label>
+        <input type = "text" minlength ="3" name = "nombre" id = "nombre">
+    </div>
+    <div  class = "control-formulario">
+        <label for = "apellido"> Apellido: </label>
+        <input type = "text" minlength ="3" name = "apellido" id = "apellido">
+    </div>
+    <div  class = "control-formulario">
+        <label for = "usuario"> Nombre de usuario: </label>
+        <input type = "text" name = "usuario" id = "usuario">
+    </div>
+    <div  class = "control-formulario">
+        <label for = "nacimiento"> Fecha de Nacimiento: </label>
+        <input type = "date" name = "nacimiento" id = "nacimiento">
+    </div>
+    <div  class = "control-formulario">
+        <label for = "domicilio"> Dirección: </label>
+        <input type = "text" name = "domicilio" id = "domicilio">
+    </div>
+    <div  class = "control-formulario">
+        <label>Perfil de Usuario: </label>
+        <select name = "perfil">        
+            <option value = "comprador"> Comprar </option>
+            <option value = "vendedor"> Vender </option>
+        </select>
+    </div>
+    <div  class = "control-formulario">
+        <label for = "email"> Email</label>
+        <input type = "email" name = "email" id = "email">
+    </div>
+    <div  class = "control-formulario">
+        <label for = "password"> Ingrese su contraseña</label>
+        <input type = "password" name = "password" id = "password">
+    </div>
+    <div  class = "control-formulario">
+        <label for = "password2"> Repita su contraseña</label>
+        <input type = "password" name = "password2" id = "password2">
+    </div>
+    <div  class = "control-formulario">
+        <label>Categorías de Interés: </label>    
+        <input type = "checkbox" name = "interes" value = "electro"> Electro
+        <input type = "checkbox" name = "interes" value = "moda"> Moda
+        <input type = "checkbox" name = "interes" value = "hogar"> Hogar
+        <input type = "checkbox" name = "interes" value = "jugueteria"> Juguetería
+        <input type = "checkbox" name = "interes" value = "vidaSana"> Vida Sana
+    </div>
+    <div  class = "control-formulario">
+        <input type = "reset" value = "borrar">
+        <input type = "submit" value = "enviar">
+    </div>
+    </form>
+</body>

@@ -1,0 +1,287 @@
+/*
+box_sizing: content-box -> default, aplica ancho/alto que definamos en el elemento
+box-sizing: border-box -> tomará en cuante ancho, alto, padding y borde dejando solo afuera el margen
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+*/
+/* Ctrl+f -> buscar/find */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;;
+}
+h3{
+    font-size: 24px;
+    /* font-weight: bold; */
+    /* padding: 10px; */
+}
+p{    
+    font-size: 12px;
+    /* border: 1px solid #000;  */
+}
+/* ---HEADER--- */
+
+header{
+    background-color: #eac926;    
+}
+
+.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+.copy-header{
+    width: 100%;
+    text-align: center; 
+    margin-top: 10px;
+}
+
+header div.logo,
+header .form{    
+    width: 300px;
+}
+header div.logo{
+    padding: 10px;
+}
+
+
+/* Barra de Busqueda */
+
+header .form{
+    display: flex;
+    align-items: center;      
+    /*flex-grow: 0.5; */
+    padding: 2px;
+    font-size: 11px; 
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header .form .submit{
+    background-color: #FFF;   
+    border: 1px solid #000;
+    color: #666;   
+    padding: 2px;
+    width: 10%; 
+}
+
+/* Burguer menu */
+
+div.menu-burguer{
+    text-align: center;
+    display: block;
+    margin: 3px; /* no necesario*/
+}
+
+div.menu-burguer i{
+    background-color: #0044AA; 
+    color: #FFF;
+    font-size: 20px; 
+    max-width: 40px;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Barra de Navegación */
+
+header nav{
+    font-size: 12px;
+    margin-left: 10px;
+}
+header ul li{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+header ul li a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 5px 0;    
+}
+
+
+/* --- SECTION BANNER --- */
+section.banner img{
+    width: 100%;
+}
+/* --- MAIN --- */
+main{
+    width: 90%;
+    margin: auto;
+    background-color: #ebebeb; 
+  }
+main section article{
+    background-color: #FFF;
+    margin: 10px 10px;    
+}
+article div.main-article{
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: baseline;
+    position: relative;
+    width: 100%;
+    padding: 15px; 
+    border-top: 1px solid #ebebeb;
+}
+main section article img{
+    width: 100%;    
+}
+main section article i,     
+.discount{    
+    color: #39b54a;      
+}
+main section article i{
+    display: block; 
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;  
+    right: 10px;
+    top: -15px;
+    transition: 1.5s;
+    /*transition para mover el camioncito en hoover */       
+}
+
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+.price{
+    font-size: 18px;
+    width: 30%;    
+}
+.discount{
+    color: #39b54a;
+    width: 70%;
+}
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+h3,
+.description{
+    color: #666;
+}    
+.description{
+    visibility: hidden;
+    margin-top: 20px;
+}
+
+
+/* mover el camion cuando me paro sobre el */
+main section article i:hover{
+    transform: rotateZ(-90deg);
+}
+
+article:hover .description{
+    visibility:visible;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+.products{
+    width: 90vw;
+}
+
+
+
+/* footer */
+footer .paga-tarjeta, .seguridad, .envio-gratis, .copyright{
+    text-align: center;
+    color:#666;
+    padding: 20px, 50px;
+    margin-top: 30px;
+}
+ 
+footer .paga-tarjeta i, .seguridad i, .envio-gratis i{
+   text-align: center;
+   color: #1259c3;
+   font-size: 2em;
+   margin-bottom: 10px; 
+}
+
+
+@media (min-width: 361px){
+    header nav{
+        display:none;
+    }
+    
+    
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start; 
+    }    
+    main section div.products article{
+        width: 45%; 
+    }
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    div.menu-burguer{
+        display: none;
+    }
+        
+    .logo, .form {
+        width: 300px;
+    }
+
+    .top-header{
+        border: dotted red;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .copy-header{
+        max-width: 200px;
+        text-align: right;
+    }
+
+   header nav{
+        display: flex;
+        justify-content: space-between;
+    }    
+
+    header nav ul{
+        display: flex;
+    }
+
+    header nav li{
+        margin:0 5px;
+    }
+
+    main section article{
+        box-shadow: 15px 0px 10px rgb(50, 50,50); 
+        }
+     
+    main section div.products article{
+        width: 22%;
+    }
+ 
+
+}
