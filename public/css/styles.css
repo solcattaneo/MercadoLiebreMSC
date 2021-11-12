@@ -1,9 +1,8 @@
 /*
 box_sizing: content-box -> default, aplica ancho/alto que definamos en el elemento
 box-sizing: border-box -> tomará en cuante ancho, alto, padding y borde dejando solo afuera el margen
-https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 */
-/* Ctrl+f -> buscar/find */
+
 *{
     margin: 0px;
     padding: 0px;
@@ -15,13 +14,11 @@ body{
 }
 h3{
     font-size: 24px;
-    /* font-weight: bold; */
-    /* padding: 10px; */
 }
 p{    
     font-size: 12px;
-    /* border: 1px solid #000;  */
 }
+
 /* ---HEADER--- */
 
 header{
@@ -31,6 +28,7 @@ header{
 .top-header{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding: 5%;
 }
 .copy-header{
@@ -41,7 +39,7 @@ header{
 
 header div.logo,
 header .form{    
-    width: 300px;
+    width: 50%;
 }
 header div.logo{
     padding: 10px;
@@ -52,8 +50,8 @@ header div.logo{
 
 header .form{
     display: flex;
-    align-items: center;      
-    /*flex-grow: 0.5; */
+    align-items:center;
+    justify-content: right;      
     padding: 2px;
     font-size: 11px; 
 }
@@ -64,6 +62,7 @@ header .form .input{
     outline: none;
     color: #666;
     padding: 2px;
+    width: 80%
 }
 
 header .form .submit{
@@ -97,7 +96,9 @@ div.menu-burguer i{
 header nav{
     font-size: 12px;
     margin-left: 10px;
+    display:none;
 }
+
 header ul li{
     list-style-type: none;
     margin: 0px;
@@ -203,28 +204,74 @@ main section h3{
 }
 
 
-
 /* footer */
-footer .paga-tarjeta, .seguridad, .envio-gratis, .copyright{
+footer .slide, .copyright{
     text-align: center;
     color:#666;
     padding: 20px, 50px;
     margin-top: 30px;
 }
  
-footer .paga-tarjeta i, .seguridad i, .envio-gratis i{
+footer .slide i{
    text-align: center;
    color: #1259c3;
    font-size: 2em;
    margin-bottom: 10px; 
 }
 
-
 @media (min-width: 361px){
-    header nav{
-        display:none;
+    
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center; 
+        align-items: flex-start;
     }
     
+    main section div.products article{
+        width: 65%;
+    }
+
+    .price,
+    .discount{
+        width: 45%;
+    }
+}
+
+
+@media (min-width: 769px){
+    div.menu-burguer{
+        display: none;
+    }
+
+    header div.logo,
+    header div.form{    
+        width: 30%;
+    }        
+    
+    .copy-header{
+        max-width: 30%;
+        text-align: right;
+    }
+    .top-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }    
+
+    header nav ul{
+        display: flex;
+    }
+
+    header nav li{
+        margin:0 5px;
+    }        
     
     main section div.products{
         display: flex;
@@ -242,39 +289,8 @@ footer .paga-tarjeta i, .seguridad i, .envio-gratis i{
     }
 }
 
-@media (min-width: 769px){
-    div.menu-burguer{
-        display: none;
-    }
-        
-    .logo, .form {
-        width: 300px;
-    }
-
-    .top-header{
-        border: dotted red;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .copy-header{
-        max-width: 200px;
-        text-align: right;
-    }
-
-   header nav{
-        display: flex;
-        justify-content: space-between;
-    }    
-
-    header nav ul{
-        display: flex;
-    }
-
-    header nav li{
-        margin:0 5px;
-    }
-
+@media (min-width: 1200px){
+     
     main section article{
         box-shadow: 15px 0px 10px rgb(50, 50,50); 
         }
@@ -282,6 +298,14 @@ footer .paga-tarjeta i, .seguridad i, .envio-gratis i{
     main section div.products article{
         width: 22%;
     }
- 
+    
+    footer.slide{
+        display: block;
+    }
+    footer .mensajes{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;        
+    }
 
 }
