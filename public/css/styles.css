@@ -204,10 +204,12 @@ footer {
     margin:auto
 }
 
+
 footer .slide, .copyright{
     text-align: center;
     color:#666;
     margin-top: 10px;
+    display:block;
 }
  
 footer .slide i{
@@ -300,14 +302,15 @@ footer .slide p{
     main section div.products article{
         width: 22%;
     }
-    
-    footer.slide{
-        display: block;
-    }
     footer .mensajes{
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;        
+        padding: 10px;    
     }
+
+    footer.slide{
+        display: block;
+    }
+
 
 }
