@@ -1,6 +1,5 @@
 *{
     margin: 10px;
-    padding: 2px 20px;
     box-sizing:border-box;
 }
 
@@ -9,24 +8,25 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
     color:black;
+    max-width: 500px;
     }
 
 .formulario{
-    display: flex;
-    flex-direction: column;
+    padding: 10px 5px;
 }
 
 .control-formulario{
-    margin-bottom: 2px;
+    margin-bottom: 3px;
+    display: block;
 }
 .control-formulario label{
     margin-bottom: 2px;
+    font-style: italic;
     display: block;
 }
 
 .campo{
     width: 100%;
-    padding: 8px;
     border-radius: 5px;
 }
 .send-button-login:hover {

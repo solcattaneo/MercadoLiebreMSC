@@ -1,8 +1,3 @@
-/*
-box_sizing: content-box -> default, aplica ancho/alto que definamos en el elemento
-box-sizing: border-box -> tomará en cuante ancho, alto, padding y borde dejando solo afuera el margen
-*/
-
 *{
     margin: 0px;
     padding: 0px;
@@ -38,7 +33,7 @@ header{
 }
 
 header div.logo,
-header .form{    
+header div.form{    
     width: 50%;
 }
 header div.logo{
@@ -94,15 +89,14 @@ div.menu-burguer i{
 /* Barra de Navegación */
 
 header nav{
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 10px;
     display:none;
 }
 
 header ul li{
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 5px;
 }
 header ul li a{
     text-decoration: none;
@@ -205,18 +199,26 @@ main section h3{
 
 
 /* footer */
+footer {
+    background-color: #FFF;
+    margin:auto
+}
+
 footer .slide, .copyright{
     text-align: center;
     color:#666;
-    padding: 20px, 50px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
  
 footer .slide i{
    text-align: center;
    color: #1259c3;
    font-size: 2em;
+   margin-top: 10px;
    margin-bottom: 10px; 
+}
+footer .slide p{
+    font-size: 14px;
 }
 
 @media (min-width: 361px){
