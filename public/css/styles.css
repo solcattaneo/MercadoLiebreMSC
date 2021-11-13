@@ -302,15 +302,16 @@ footer .slide p{
     main section div.products article{
         width: 22%;
     }
+    
+    footer .slide{
+        display: block;
+        padding: 5px 15px;
+    }
+
     footer .mensajes{
         display: flex;
         justify-content: space-between;
-        padding: 10px;    
+        padding: 5px 15px;    
     }
-
-    footer.slide{
-        display: block;
-    }
-
 
 }
